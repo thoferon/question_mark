@@ -8,7 +8,7 @@ module QuestionMark.Core (
 data Matcher a = Matcher (a -> Bool) String
 
 data TestResult = Success | Error String
-                  deriving(Show)
+                  deriving(Show, Eq)
 
 should :: a -> (Matcher a) -> TestResult
 
